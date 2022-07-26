@@ -1,18 +1,11 @@
 name: Lint
 
 on:
-  pull_request:
-  push:
-    branches:
-      - master
-      - main
-      - release/*
-      - landchecks/*
   workflow_dispatch:
 
 jobs:
   lintrunner:
-    runs-on: linux.20_04.16x
+    runs-on: ubuntu-20.04
     steps:
       - name: Setup Python
         uses: actions/setup-python@v2
